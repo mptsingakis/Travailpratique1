@@ -1,0 +1,109 @@
+#checkMenu:checked~ul {  
+    max-height: 200px; // max-height peut transiter mais non height
+}
+
+#checkMenu:checked~ul>li{
+    opacity : 1;
+}
+
+#checkMenu:checked ~ #btnMenu {
+    transform: rotate(90deg) ;
+    color : white;
+}
+
+#checkMenu {
+    display : none;
+}
+
+#btnMenu {
+    display : block;
+    color: #fff;
+    font-size: 2em;
+    transform-origin: 50% 60%;
+    user-select: none;
+    position : absolute;
+    width : 30px;
+    height : 32px;
+    transition: transform 1s;
+    left :10px;
+    top : 5px;
+    cursor : pointer;
+}
+
+#menu {
+    display: flex;
+    position: absolute;
+    top : 110px;
+    align-items: flex-start;
+    height : 40px;
+
+    ul {
+        width : 100vw;
+        margin-left : -20px;
+        padding-left:20px;
+        padding-bottom: 20px;
+        margin-top : 32px;
+        display: flex;
+        flex-direction: column;
+        list-style-type: none;
+        max-height: 0px; // on cache le menu mobile
+        height : auto; // la hauteur nécessaire pour afficher uniquement les choix de menu 
+        transition : max-height 1s; // max-height sera animé
+        overflow: hidden; // pour empêcher les li d'être visible quand le menu est fermé
+        li {            
+            opacity :0;
+            transition : opacity .5s;
+            transition : opacity 1s;
+            a {
+                text-decoration: none;
+                display: block;
+                padding: 6px 3px 3px 30px;
+                &:hover {
+                    color : #fff;
+                }
+                &:last-child{
+                    padding-bottom: 15px;
+                }
+            }
+        }
+    }
+}
+
+// ---------------------------------------------------------------- un premier point de rupture 
+// uniquement pour le menu
+@media screen and (min-width:500px) {
+        #btnMenu {
+            display : none;
+        }
+
+    #menu {
+            position: static;
+           
+            flex-direction: row;
+        ul {
+            height: 26px;
+            margin : 0;
+            margin-left : 2%;
+            overflow:visible;
+            flex-direction: row;
+            justify-content: space-around;
+            opacity:1;
+        
+            li {
+                opacity :1;
+                flex:1;
+               text-align: center;
+                vertical-align: center;
+                a {
+                    flex :1;
+                    height : 26px;
+                    padding-top: 11px;;
+                    
+                    &:hover{
+                        background-color :rgb(185, 184, 184)
+                    }
+                }
+            }
+        }
+    }
+}

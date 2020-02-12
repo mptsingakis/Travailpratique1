@@ -1,3 +1,35 @@
-h2{
-    color: blue($color: #0ac7bd);
+header {
+    background-color: rgb(105, 108, 138);
+    display: grid;
+    align-items: center; 
+    height: 28vh;
+}
+
+h1, header p{
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+h1 {
+    font-size: 220%;
+}
+
+header p {
+    margin-top: -5vh;
+}
+
+@media screen and (min-width : 500px){
+
+    header {
+        height: 27vh;
+    }
+
+    h1 {
+        font-size: 350%;
+    }
+    
+    header p {
+        margin-top: -8vh;
+    }
+
 }
