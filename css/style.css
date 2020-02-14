@@ -159,6 +159,7 @@ main {
 .ligne {
   width: 100%;
   height: 6px;
+  background-color: white;
   -webkit-transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: opacity 0.5s, -webkit-transform 0.5s;
   transition: transform 0.5s, opacity 0.5s;
@@ -170,19 +171,14 @@ main {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  top: 2%;
-  left: 2%;
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 100vh;
 }
 
 #menu ul {
   width: 100vw;
-  margin-left: 0;
-  padding-bottom: 20px;
-  margin-top: 32px;
+  margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
