@@ -1,39 +1,67 @@
-#checkMenu:checked~ul {  
+#chkBoutonBurger:checked~ul {  
     max-height: 200px; // max-height peut transiter mais non height
 }
 
-#checkMenu:checked~ul>li{
+#chkBoutonBurger:checked~ul>li{
     opacity : 1;
 }
 
-#checkMenu:checked ~ #btnMenu {
-    transform: rotate(90deg) ;
-    color : white;
+/*Les effets de transitions sur les 3 lignes du boutons burger*/
+
+#chkBoutonBurger:checked~.boutonBurger>.ligne:first-child {
+    transform: translateY(15px) rotate(45deg);
 }
 
-#checkMenu {
+#chkBoutonBurger:checked~.boutonBurger>.ligne:nth-child(2) {
+    opacity: 0;
+}
+
+#chkBoutonBurger:checked~.boutonBurger>.ligne:last-child {
+    transform: translateY(-15px) rotate(-45deg);
+}
+
+/*Effets d'animation CSS sur le bouton burger lorsque le menu est affiché*/
+
+@keyframes tournerBoutonBurger {
+    from {
+        transform: rotate(0deg);
+    }
+    50%, to{
+        transform: rotate(360deg);
+    }
+}
+
+#chkBoutonBurger:checked~.boutonBurger {
+    animation: tournerBoutonBurger es infinite 1s;
+}
+
+#chkBoutonBurger {
     display : none;
 }
 
-#btnMenu {
-    display : block;
-    color: #fff;
-    font-size: 2em;
-    transform-origin: 50% 60%;
-    user-select: none;
-    position : absolute;
-    width : 30px;
-    height : 32px;
-    transition: transform 1s;
-    left :10px;
-    top : 5px;
-    cursor : pointer;
+.boutonBurger {
+    width: 42px;
+    height: 36px;
+    cursor: pointer;
+    /*Conteneur flex*/
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
 }
+
+.ligne {
+    width: 100%;
+    height: 6px;
+    background-color:white;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
 
 #menu {
     display: flex;
     position: absolute;
-    top : 110px;
+    top : 2%;
+    left: 2%;
     align-items: flex-start;
     height : 40px;
 
@@ -72,7 +100,7 @@
 // ---------------------------------------------------------------- un premier point de rupture 
 // uniquement pour le menu
 @media screen and (min-width:500px) {
-        #btnMenu {
+        .boutonBurger {
             display : none;
         }
 
