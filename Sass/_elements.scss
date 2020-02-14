@@ -1,0 +1,10 @@
+.font-background-color{
+    background-color: darken($couleur_mauve,5%);
+    color: white;
+}
+header{
+    @extend .font-background-color;
+}
+footer{
+    @extend .font-background-color;
+}
