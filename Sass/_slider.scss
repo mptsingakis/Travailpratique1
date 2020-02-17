@@ -1,30 +1,3 @@
-//ajouter media query
-@media screen and (max-width: 400px){
-    .slider,.slides{
-        width: 200px;
-    }
-    
-    .slider>nav{
-        width: 200px;
-    }
-    .slides>div{
-        width: 200px;
-        height: 200px;
-    }
-    .slides>div>h2{
-        
-            font-size: 1rem;
-            top:-10px;
-    }
-    .slides>div>p{
-            font-size :0.8rem;
-            bottom: 0px;
-    }
-
-}
-
-////NOT MOBILE FIRST
-
 .slider>nav>a{
     display: inline-flex;
     width: 1.5rem;
@@ -62,8 +35,6 @@
     height :400px;
     
 }
-
-
 .slider {
     width: 300px;
     text-align: center;
@@ -77,11 +48,7 @@
     scroll-behavior: smooth;
     -webkit-overflow-scrolling: touch;
     
-    div{
-        display : flex;
-        flex-direction : column;
-        
-        h2 {
+    div>h2{
             font-size: 1.5rem;
             z-index: 100;
             position: absolute;
@@ -89,8 +56,6 @@
             background-color: rgba(0, 0, 0, 0.219);
             color: $couleur_gris;
             width: 100%;
-        }
-        
     }
 }
 
@@ -137,7 +102,30 @@ img {
     height: 100%;
 }
 
+//ajouter media query
+@media screen and (max-width: 400px){
+    .slider,.slides{
+        width: 200px;
+    }
+    
+    .slider>nav{
+        width: 200px;
+    }
+    .slides>div{
+        width: 200px;
+        height: 200px;
+    }
+    .slides>div>h2{
+        
+            font-size: 1rem;
+            top:-10px;
+    }
+    .slides>div>p{
+            font-size :0.8rem;
+            bottom: 0px;
+    }
 
+}
 
 
 

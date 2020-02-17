@@ -12,3 +12,15 @@ h1,h2, header ,a{
 p , h4{
     font-family: $font-texte;
 }
+p{
+    font-size: 1.3em;
+}
+
+
+@media screen and (min-width : 500px){
+    p{
+        font-size: 1.6em;
+    }
+}
+
+
