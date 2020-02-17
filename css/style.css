@@ -24,6 +24,8 @@ License: GNU General Public License v2 or later
 /*----------------------------------------------------------------
 # elements
 --------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
 .font-background-color, #menu, header, footer {
   background-color: #5e617c;
   color: white;
@@ -49,7 +51,6 @@ header {
 }
 
 h1, header p {
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -292,6 +293,14 @@ footer {
 /*----------------------------------------------------------------
 # typography
 --------------------------------------------------------------*/
+h1, h2, header, a {
+  font-family: "Montserrat";
+}
+
+p, h4 {
+  font-family: "Open Sans Condensed";
+}
+
 /*----------------------------------------------------------------
 # slider
 --------------------------------------------------------------*/

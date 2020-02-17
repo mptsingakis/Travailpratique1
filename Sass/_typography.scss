@@ -1,0 +1,14 @@
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
+
+// Font Variables
+$font-titre: 'Montserrat';
+$font-texte: 'Open Sans Condensed';
+
+h1,h2, header ,a{
+    font-family: $font-titre;
+}
+
+p , h4{
+    font-family: $font-texte;
+}
