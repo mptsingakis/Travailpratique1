@@ -35,7 +35,6 @@ export class Slider {
             elmTitre.innerHTML= unSlide.titre
             elmSlide.appendChild(elmTitre)
 
-           
 
             /*balise Image */
             let elmImg = document.createElement('img')

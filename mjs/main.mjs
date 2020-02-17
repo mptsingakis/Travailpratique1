@@ -1,4 +1,4 @@
-import { Slider } from "./Slider.mjs";
+import { Slider } from "./slider.mjs";
 import { config_slider } from "./sliderConfig.mjs";
 const elmSlider = document.querySelector('.mon-slider')
 console.log(elmSlider.tagName)
