@@ -16,6 +16,7 @@ License: GNU General Public License v2 or later
 # pied-page
 # typography
 # variables
+# slider
 
 /*----------------------------------------------------------------
 # variables
@@ -57,8 +58,10 @@ License: GNU General Public License v2 or later
 @import "_typography.scss";
 
 /*----------------------------------------------------------------
-# variables
+# slider
 --------------------------------------------------------------*/
-@import "_variables.scss";
+@import "_slider.scss";
+
+
 
 /*-------------------------------------------------------------- */
