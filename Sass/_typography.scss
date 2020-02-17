@@ -21,6 +21,16 @@ p{
     p{
         font-size: 1.6em;
     }
+
+    a{
+        font-size: 1em;
+    }
+}
+@media screen and (min-width : 700px){
+    
+    a{
+        font-size: 1.1em;
+    }
 }
 
 
