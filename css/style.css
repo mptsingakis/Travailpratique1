@@ -24,6 +24,8 @@ License: GNU General Public License v2 or later
 /*----------------------------------------------------------------
 # elements
 --------------------------------------------------------------*/
+@import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
+@import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
 .font-background-color, #menu, header, footer {
   background-color: #5e617c;
   color: white;
@@ -49,7 +51,6 @@ header {
 }
 
 h1, header p {
-  font-family: Arial, Helvetica, sans-serif;
   color: white;
 }
 
@@ -81,12 +82,14 @@ main {
   height: 100%;
 }
 
-.titre {
-  margin: 0;
-}
-
 header {
   margin-bottom: 0;
+}
+
+h2, p {
+  width: 70%;
+  margin: 0 auto;
+  padding-top: 20px;
 }
 
 /*----------------------------------------------------------------
@@ -184,10 +187,11 @@ header {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  width: 100%;
 }
 
 #menu ul {
-  width: 100vw;
+  width: 100%;
   margin: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -284,7 +288,6 @@ header {
 # piedPage
 --------------------------------------------------------------*/
 footer {
-  background-color: 0;
   padding-top: 5px;
   padding-bottom: 5px;
 }
@@ -292,30 +295,36 @@ footer {
 /*----------------------------------------------------------------
 # typography
 --------------------------------------------------------------*/
-/*----------------------------------------------------------------
-# slider
---------------------------------------------------------------*/
-@media screen and (max-width: 400px) {
-  .slider, .slides {
-    width: 200px;
+h1, h2, header, a {
+  font-family: "Montserrat";
+}
+
+p, h4 {
+  font-family: "Open Sans Condensed";
+}
+
+p {
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 500px) {
+  p {
+    font-size: 1.6em;
   }
-  .slider > nav {
-    width: 200px;
-  }
-  .slides > div {
-    width: 200px;
-    height: 200px;
-  }
-  .slides > div > h2 {
-    font-size: 1rem;
-    top: -10px;
-  }
-  .slides > div > p {
-    font-size: 0.8rem;
-    bottom: 0px;
+  a {
+    font-size: 1em;
   }
 }
 
+@media screen and (min-width: 700px) {
+  a {
+    font-size: 1.1em;
+  }
+}
+
+/*----------------------------------------------------------------
+# slider
+--------------------------------------------------------------*/
 .slider > nav > a {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
@@ -383,17 +392,7 @@ footer {
   -webkit-overflow-scrolling: touch;
 }
 
-.slides div {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-
-.slides div h2 {
+.slides div > h2 {
   font-size: 1.5rem;
   z-index: 100;
   position: absolute;
@@ -455,6 +454,27 @@ img {
   left: 0;
   width: 100%;
   height: 100%;
+}
+
+@media screen and (max-width: 400px) {
+  .slider, .slides {
+    width: 200px;
+  }
+  .slider > nav {
+    width: 200px;
+  }
+  .slides > div {
+    width: 200px;
+    height: 200px;
+  }
+  .slides > div > h2 {
+    font-size: 1rem;
+    top: -10px;
+  }
+  .slides > div > p {
+    font-size: 0.8rem;
+    bottom: 0px;
+  }
 }
 
 /*-------------------------------------------------------------- */
