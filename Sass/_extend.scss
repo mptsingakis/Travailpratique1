@@ -1,12 +1,13 @@
-%font-background-color{
-    background-color: ( rgb(105, 108, 138),5%);
-    color:rgb(238, 11, 11);
+.font-background-color{
+   
+    color:rgb(63, 76, 134);
+    text-decoration: underline;
 }
 
-#menu {
-    @extend %font-background-color;
+h2 {
+    @extend .font-background-color;
 }
 
-header{
-    @extend %font-background-color;
+footer>p{
+    @extend .font-background-color;
 }

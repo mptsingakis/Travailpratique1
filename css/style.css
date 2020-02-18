@@ -27,9 +27,9 @@ License: GNU General Public License v2 or later
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
-#menu, header {
-  background-color: #696c8a, 5%;
-  color: #ee0b0b;
+.font-background-color, h2, footer > p {
+  color: #3f4c86;
+  text-decoration: underline;
 }
 
 /*----------------------------------------------------------------
@@ -94,7 +94,7 @@ h1, header p {
 }
 
 h1 {
-  font-size: 220%;
+  font-size: 200%;
   -webkit-animation: animTitre 8s forwards;
           animation: animTitre 8s forwards;
 }
