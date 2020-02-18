@@ -111,69 +111,39 @@ h1 {
 }
 
 /*----------------Animations----------------*/
-@-webkit-keyframes animTitre {
-  from {
-    opacity: 0;
-    color: #696c8a;
-  }
-  80% {
-    opacity: 0;
-    color: #696c8a;
-  }
-  100% {
-    opacity: 100%;
-    color: white;
-  }
-}
-@keyframes animTitre {
-  from {
-    opacity: 0;
-    color: #696c8a;
-  }
-  80% {
-    opacity: 0;
-    color: #696c8a;
-  }
-  100% {
-    opacity: 100%;
-    color: white;
-  }
+/*@keyframes animTitre {
+    from {
+        opacity : 0;
+        color : rgb(105, 108, 138);
+    }
+
+    80% {
+        opacity : 0;
+        color : rgb(105, 108, 138);
+    }
+    
+    100% {
+        opacity: 100%;
+        color : white;
+    }
 }
 
-@-webkit-keyframes animFondTitre {
-  from {
-    background-color: white;
-    -webkit-transform: scale(10, 10);
-            transform: scale(10, 10);
-  }
-  20% {
-    -webkit-transform: scale(10, 10);
-            transform: scale(10, 10);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    background-color: #696c8a;
-  }
-}
 
 @keyframes animFondTitre {
-  from {
-    background-color: white;
-    -webkit-transform: scale(10, 10);
-            transform: scale(10, 10);
-  }
-  20% {
-    -webkit-transform: scale(10, 10);
-            transform: scale(10, 10);
-  }
-  100% {
-    -webkit-transform: scale(1, 1);
-            transform: scale(1, 1);
-    background-color: #696c8a;
-  }
-}
+    from {
+        background-color :white;
+        transform : scale(10,10);
+    }
 
+    20% {
+        transform : scale(10,10);
+    }
+    
+    100% {
+        transform : scale(1,1);
+        background-color : rgb(105, 108, 138);
+    }
+}*/
 /*----------------------------------------------------------------
 # layout
 --------------------------------------------------------------*/
@@ -386,29 +356,17 @@ h2, p {
 }
 
 /*----------------Animations----------------*/
-@-webkit-keyframes animMenu {
-  from {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-@keyframes animMenu {
-  from {
-    opacity: 0;
-  }
-  90% {
-    opacity: 0;
-  }
-  to {
-    opacity: 100%;
-  }
-}
-
+/*@keyframes animMenu {
+    from  {
+        opacity: 0;
+    }
+    90% {
+        opacity : 0;
+    }
+    to  {
+        opacity: 100%;
+    }
+}*/
 /*----------------------------------------------------------------
 # piedPage
 --------------------------------------------------------------*/
