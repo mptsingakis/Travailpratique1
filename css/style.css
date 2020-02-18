@@ -133,6 +133,12 @@ h1 {
   }
   h1 {
     margin: 0;
+    font-size: 250%;
+  }
+}
+
+@media screen and (min-width: 1100px) {
+  h1 {
     font-size: 350%;
   }
 }
@@ -421,6 +427,15 @@ h2, p {
             flex: 1;
     height: 26px;
     padding-top: 11px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  #menu {
+    height: 15%;
+  }
+  #menu a {
+    font-size: 150%;
   }
 }
 

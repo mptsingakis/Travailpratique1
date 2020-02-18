@@ -144,6 +144,19 @@
     }
 }
 
+@media screen and (min-width:1000px) {
+
+    #menu {
+        height: 15%;
+        a {
+            font-size: 150%;
+        }
+        
+    
+    }
+ }
+
+
 /*----------------Animations----------------*/
 
 /*@keyframes animMenu {
