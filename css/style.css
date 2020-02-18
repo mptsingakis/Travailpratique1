@@ -27,27 +27,23 @@ License: GNU General Public License v2 or later
 @import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
 .font-background-color, #menu, header, footer {
-  background-color: #5e617c;
+  background-color: #696c8a, 5%;
   color: white;
-}
-
-.text-center, header, footer {
-  margin: 0 auto;
-  margin-bottom: 5px;
-  text-align: center;
 }
 
 /*----------------------------------------------------------------
 # entete
 --------------------------------------------------------------*/
 header {
-  background-color: #696c8a;
   display: -ms-grid;
   display: grid;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   height: 28vh;
+  -webkit-animation: animFondTitre 5s forwards;
+          animation: animFondTitre 5s forwards;
+  margin-bottom: 0;
 }
 
 h1, header p {
@@ -56,21 +52,82 @@ h1, header p {
 
 h1 {
   font-size: 220%;
-}
-
-header p {
-  margin-top: -5vh;
+  -webkit-animation: animTitre 8s forwards;
+          animation: animTitre 8s forwards;
 }
 
 @media screen and (min-width: 500px) {
   header {
-    height: 27vh;
+    height: 20vh;
+    margin-top: 7% !important;
   }
   h1 {
+    margin: 0;
     font-size: 350%;
   }
-  header p {
-    margin-top: -8vh;
+}
+
+/*----------------Animations----------------*/
+@-webkit-keyframes animTitre {
+  from {
+    opacity: 0;
+    color: #696c8a;
+  }
+  80% {
+    opacity: 0;
+    color: #696c8a;
+  }
+  100% {
+    opacity: 100%;
+    color: white;
+  }
+}
+@keyframes animTitre {
+  from {
+    opacity: 0;
+    color: #696c8a;
+  }
+  80% {
+    opacity: 0;
+    color: #696c8a;
+  }
+  100% {
+    opacity: 100%;
+    color: white;
+  }
+}
+
+@-webkit-keyframes animFondTitre {
+  from {
+    background-color: white;
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  20% {
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background-color: #696c8a;
+  }
+}
+
+@keyframes animFondTitre {
+  from {
+    background-color: white;
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  20% {
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background-color: #696c8a;
   }
 }
 
@@ -88,13 +145,20 @@ header {
 
 h2, p {
   width: 70%;
-  margin: 0 auto;
+  margin: 0;
+  left: 5%;
   padding-top: 20px;
 }
 
 /*----------------------------------------------------------------
 # mixins
 --------------------------------------------------------------*/
+header {
+  margin: 0;
+  /*margin-top: 7%;*/
+  text-align: center;
+}
+
 /*----------------------------------------------------------------
 # navigation
 --------------------------------------------------------------*/
@@ -187,7 +251,12 @@ h2, p {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  background-color: #696c8a;
   width: 100%;
+  z-index: 5;
+  margin-top: 0;
+  -webkit-animation: animMenu 9s forwards;
+          animation: animMenu 9s forwards;
 }
 
 #menu ul {
@@ -236,9 +305,6 @@ h2, p {
   .boutonBurger {
     display: none;
   }
-  header {
-    margin-top: 4%;
-  }
   nav {
     position: static;
   }
@@ -281,6 +347,30 @@ h2, p {
             flex: 1;
     height: 26px;
     padding-top: 11px;
+  }
+}
+
+/*----------------Animations----------------*/
+@-webkit-keyframes animMenu {
+  from {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes animMenu {
+  from {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
   }
 }
 

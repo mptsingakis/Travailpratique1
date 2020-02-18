@@ -61,8 +61,11 @@
     display: flex;
     position: absolute;
     align-items: flex-start;
-    
+    background-color : rgb(105, 108, 138);
     width: 100%;
+    z-index: 5;
+    margin-top: 0;
+    animation: animMenu 9s forwards;
 
     ul {
         width : 100%;
@@ -105,10 +108,6 @@
         display : none;
     }
 
-    header {
-        margin-top: 4%;
-    }
-
     nav {
         position: static;
     }
@@ -143,5 +142,19 @@
                 }
             }
         }
+    }
+}
+
+/*----------------Animations----------------*/
+
+@keyframes animMenu {
+    from  {
+        opacity: 0;
+    }
+    90% {
+        opacity : 0;
+    }
+    to  {
+        opacity: 100%;
     }
 }

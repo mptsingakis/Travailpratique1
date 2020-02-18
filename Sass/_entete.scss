@@ -3,6 +3,8 @@ header {
     display: grid;
     align-items: center; 
     height: 28vh;
+    animation: animFondTitre 5s forwards;
+    margin-bottom: 0;
 }
 
 h1, header p{
@@ -11,24 +13,58 @@ h1, header p{
 
 h1 {
     font-size: 220%;
-}
-
-header p {
-    margin-top: -5vh;
+    animation : animTitre 8s forwards;
 }
 
 @media screen and (min-width : 500px){
 
     header {
-        height: 27vh;
+        height: 20vh;
+        margin-top: 7%!important;
     }
 
     h1 {
+        margin: 0;
         font-size: 350%;
     }
-    
-    header p {
-        margin-top: -8vh;
+
+}
+
+
+
+
+/*----------------Animations----------------*/
+
+@keyframes animTitre {
+    from {
+        opacity : 0;
+        color : rgb(105, 108, 138);
     }
 
+    80% {
+        opacity : 0;
+        color : rgb(105, 108, 138);
+    }
+    
+    100% {
+        opacity: 100%;
+        color : white;
+    }
+}
+
+
+@keyframes animFondTitre {
+    from {
+        background-color :white;
+        transform : scale(10,10);
+    }
+
+    20% {
+        transform : scale(10,10);
+    }
+    
+    100% {
+        transform : scale(1,1);
+        background-color : rgb(105, 108, 138);
+    }
 }

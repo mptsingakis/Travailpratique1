@@ -14,15 +14,4 @@ footer{
     @extend .font-background-color;
 }
 
-.text-center{
-    margin: 0 auto;
-    margin-bottom: 5px;
-    text-align: center;
-}
 
-header{
-    @extend .text-center;
-}
-footer{
-    @extend .text-center;
-}
