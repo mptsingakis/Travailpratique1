@@ -8,27 +8,70 @@ License: GNU General Public License v2 or later
 /*--------------------------------------------------------------
 >>> LISTE DES FICHIERS SCSS IMPORTÉS 
 ----------------------------------------------------------------
+# variables
+# extend
+# mixins
+# typography
 # elements
 # entete
 # layout
-# mixins
 # navigation
 # pied-page
-# typography
-# variables
 # slider
 
 /*----------------------------------------------------------------
 # variables
 --------------------------------------------------------------*/
 /*----------------------------------------------------------------
-# elements
+# extend
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
 #menu, header {
   background-color: #696c8a, 5%;
-  color: white;
+  color: #ee0b0b;
+}
+
+/*----------------------------------------------------------------
+# mixins
+--------------------------------------------------------------*/
+header {
+  margin: 0;
+  /*margin-top: 7%;*/
+  text-align: center;
+}
+
+/*----------------------------------------------------------------
+# typography
+--------------------------------------------------------------*/
+h1, h2, header, a {
+  font-family: "Montserrat";
+}
+
+p, h4 {
+  font-family: "Open Sans Condensed";
+}
+
+/*----------------------------------------------------------------
+# elements
+--------------------------------------------------------------*/
+p {
+  font-size: 1.3em;
+}
+
+@media screen and (min-width: 500px) {
+  p {
+    font-size: 1.6em;
+  }
+  a {
+    font-size: 0.9em;
+  }
+}
+
+@media screen and (min-width: 700px) {
+  a {
+    font-size: 1.1em;
+  }
 }
 
 /*----------------------------------------------------------------
@@ -148,15 +191,7 @@ h2, p {
   margin: 0;
   left: 5%;
   padding-top: 20px;
-}
-
-/*----------------------------------------------------------------
-# mixins
---------------------------------------------------------------*/
-header {
-  margin: 0;
-  /*margin-top: 7%;*/
-  text-align: center;
+  margin: 0 auto;
 }
 
 /*----------------------------------------------------------------
@@ -383,36 +418,6 @@ footer {
   color: #696c8a;
   display: -ms-grid;
   display: grid;
-}
-
-/*----------------------------------------------------------------
-# typography
---------------------------------------------------------------*/
-h1, h2, header, a {
-  font-family: "Montserrat";
-}
-
-p, h4 {
-  font-family: "Open Sans Condensed";
-}
-
-p {
-  font-size: 1.3em;
-}
-
-@media screen and (min-width: 500px) {
-  p {
-    font-size: 1.6em;
-  }
-  a {
-    font-size: 1em;
-  }
-}
-
-@media screen and (min-width: 700px) {
-  a {
-    font-size: 1.1em;
-  }
 }
 
 /*----------------------------------------------------------------

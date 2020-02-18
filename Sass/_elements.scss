@@ -1,14 +1,22 @@
-%font-background-color{
-    background-color: ( rgb(105, 108, 138),5%);
-    color:white;
+p{
+    font-size: 1.3em;
 }
 
-#menu {
-    @extend %font-background-color;
-}
 
-header{
-    @extend %font-background-color;
+@media screen and (min-width : 500px){
+    p{
+        font-size: 1.6em;
+    }
+
+    a{
+        font-size: 0.9em;
+    }
+}
+@media screen and (min-width : 700px){
+    
+    a{
+        font-size: 1.1em;
+    }
 }
 
 
