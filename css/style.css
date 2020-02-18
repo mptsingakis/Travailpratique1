@@ -414,10 +414,37 @@ h2, p {
 --------------------------------------------------------------*/
 footer {
   padding-top: 5px;
-  padding-bottom: 5px;
-  color: #696c8a;
+  padding-bottom: 15px;
+  color: #63639c;
+  background-color: #b0b2c3;
+}
+
+#wrap {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1,1fr;
+      grid-template-columns: 1,1fr;
+  -ms-grid-rows: 2,1fr;
+      grid-template-rows: 2,1fr;
+  justify-items: center;
+}
+
+@media screen and (min-width: 500px) {
+  #wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1,1fr;
+        grid-template-rows: 1,1fr;
+  }
+  #wrap2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/ span 1/ span 1;
+  }
 }
 
 /*----------------------------------------------------------------
