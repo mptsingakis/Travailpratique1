@@ -2,7 +2,7 @@
     display: inline-flex;
     width: 1.5rem;
     height: 1.5rem;
-    background: white;
+    background: lighten($couleur_mauve,25%);
     text-decoration: none;
     align-items: center;
     justify-content: center;
