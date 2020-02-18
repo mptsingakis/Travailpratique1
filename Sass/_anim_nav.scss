@@ -1,0 +1,15 @@
+@keyframes animMenu {
+    from  {
+        opacity: 0;
+    }
+    90% {
+        opacity : 0;
+    }
+    to  {
+        opacity: 100%;
+    }
+}
+
+.animMenu {
+    animation : animMenu 7s forwards;
+}

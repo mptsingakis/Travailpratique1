@@ -1,0 +1,20 @@
+@keyframes animTitre {
+    from {
+        opacity : 0;
+        color : rgb(105, 108, 138);
+    }
+
+    80% {
+        opacity : 0;
+        color : rgb(105, 108, 138);
+    }
+    
+    100% {
+        opacity: 100%;
+        color : white;
+    }
+}
+
+.animTitre {
+    animation : animTitre 6s forwards;
+}

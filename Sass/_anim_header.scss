@@ -1,0 +1,19 @@
+@keyframes animHeader {
+    from {
+        background-color :white;
+        transform : scale(10,10);
+    }
+
+    20% {
+        transform : scale(10,10);
+    }
+    
+    100% {
+        transform : scale(1,1);
+        background-color : rgb(105, 108, 138);
+    }
+}
+
+.animHeader {
+    animation : animHeader 5s forwards;
+}

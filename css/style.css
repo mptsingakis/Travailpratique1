@@ -27,9 +27,9 @@ License: GNU General Public License v2 or later
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
-#menu, header {
-  background-color: #696c8a, 5%;
-  color: #ee0b0b;
+.font-background-color, h2, footer > p {
+  color: #3f4c86;
+  text-decoration: underline;
 }
 
 /*----------------------------------------------------------------
@@ -75,6 +75,37 @@ p {
 }
 
 /*----------------------------------------------------------------
+# animNav
+--------------------------------------------------------------*/
+@-webkit-keyframes animMenu {
+  from {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+@keyframes animMenu {
+  from {
+    opacity: 0;
+  }
+  90% {
+    opacity: 0;
+  }
+  to {
+    opacity: 100%;
+  }
+}
+
+.animMenu {
+  -webkit-animation: animMenu 7s forwards;
+          animation: animMenu 7s forwards;
+}
+
+/*----------------------------------------------------------------
 # entete
 --------------------------------------------------------------*/
 header {
@@ -84,8 +115,6 @@ header {
       -ms-flex-align: center;
           align-items: center;
   height: 28vh;
-  -webkit-animation: animFondTitre 5s forwards;
-          animation: animFondTitre 5s forwards;
   margin-bottom: 0;
 }
 
@@ -94,9 +123,7 @@ h1, header p {
 }
 
 h1 {
-  font-size: 220%;
-  -webkit-animation: animTitre 8s forwards;
-          animation: animTitre 8s forwards;
+  font-size: 200%;
 }
 
 @media screen and (min-width: 500px) {
@@ -110,40 +137,84 @@ h1 {
   }
 }
 
-/*----------------Animations----------------*/
-/*@keyframes animTitre {
-    from {
-        opacity : 0;
-        color : rgb(105, 108, 138);
-    }
-
-    80% {
-        opacity : 0;
-        color : rgb(105, 108, 138);
-    }
-    
-    100% {
-        opacity: 100%;
-        color : white;
-    }
+/*----------------------------------------------------------------
+# animHeader
+--------------------------------------------------------------*/
+@-webkit-keyframes animHeader {
+  from {
+    background-color: white;
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  20% {
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background-color: #696c8a;
+  }
+}
+@keyframes animHeader {
+  from {
+    background-color: white;
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  20% {
+    -webkit-transform: scale(10, 10);
+            transform: scale(10, 10);
+  }
+  100% {
+    -webkit-transform: scale(1, 1);
+            transform: scale(1, 1);
+    background-color: #696c8a;
+  }
 }
 
+.animHeader {
+  -webkit-animation: animHeader 5s forwards;
+          animation: animHeader 5s forwards;
+}
 
-@keyframes animFondTitre {
-    from {
-        background-color :white;
-        transform : scale(10,10);
-    }
+/*----------------------------------------------------------------
+# animTitre
+--------------------------------------------------------------*/
+@-webkit-keyframes animTitre {
+  from {
+    opacity: 0;
+    color: #696c8a;
+  }
+  80% {
+    opacity: 0;
+    color: #696c8a;
+  }
+  100% {
+    opacity: 100%;
+    color: white;
+  }
+}
+@keyframes animTitre {
+  from {
+    opacity: 0;
+    color: #696c8a;
+  }
+  80% {
+    opacity: 0;
+    color: #696c8a;
+  }
+  100% {
+    opacity: 100%;
+    color: white;
+  }
+}
 
-    20% {
-        transform : scale(10,10);
-    }
-    
-    100% {
-        transform : scale(1,1);
-        background-color : rgb(105, 108, 138);
-    }
-}*/
+.animTitre {
+  -webkit-animation: animTitre 6s forwards;
+          animation: animTitre 6s forwards;
+}
+
 /*----------------------------------------------------------------
 # layout
 --------------------------------------------------------------*/
@@ -159,7 +230,7 @@ header {
 h2, p {
   width: 70%;
   margin: 0;
-  left: 5%;
+  left: 0;
   padding-top: 20px;
   margin: 0 auto;
 }
@@ -260,8 +331,6 @@ h2, p {
   width: 100%;
   z-index: 5;
   margin-top: 0;
-  -webkit-animation: animMenu 9s forwards;
-          animation: animMenu 9s forwards;
 }
 
 #menu ul {
@@ -372,10 +441,37 @@ h2, p {
 --------------------------------------------------------------*/
 footer {
   padding-top: 5px;
-  padding-bottom: 5px;
-  color: #696c8a;
+  padding-bottom: 15px;
+  color: #63639c;
+  background-color: #b0b2c3;
+}
+
+#wrap {
   display: -ms-grid;
   display: grid;
+  -ms-grid-columns: 1,1fr;
+      grid-template-columns: 1,1fr;
+  -ms-grid-rows: 2,1fr;
+      grid-template-rows: 2,1fr;
+  justify-items: center;
+}
+
+@media screen and (min-width: 500px) {
+  #wrap {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+    -ms-grid-rows: 1,1fr;
+        grid-template-rows: 1,1fr;
+  }
+  #wrap2 {
+    -ms-grid-row: 1;
+    -ms-grid-row-span: 1;
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-area: 1/2/ span 1/ span 1;
+  }
 }
 
 /*----------------------------------------------------------------
