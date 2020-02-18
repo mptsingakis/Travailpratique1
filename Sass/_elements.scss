@@ -1,17 +1,14 @@
-.font-background-color{
-    background-color: ($couleur_mauve,5%);
+%font-background-color{
+    background-color: ( rgb(105, 108, 138),5%);
     color:white;
 }
 
 #menu {
-    @extend .font-background-color;
+    @extend %font-background-color;
 }
 
 header{
-    @extend .font-background-color;
-}
-footer{
-    @extend .font-background-color;
+    @extend %font-background-color;
 }
 
 

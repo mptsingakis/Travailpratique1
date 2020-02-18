@@ -26,7 +26,7 @@ License: GNU General Public License v2 or later
 --------------------------------------------------------------*/
 @import url(https://fonts.googleapis.com/css?family=Montserrat&display=swap);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300&display=swap);
-.font-background-color, #menu, header, footer {
+#menu, header {
   background-color: #696c8a, 5%;
   color: white;
 }
@@ -380,6 +380,9 @@ header {
 footer {
   padding-top: 5px;
   padding-bottom: 5px;
+  color: #696c8a;
+  display: -ms-grid;
+  display: grid;
 }
 
 /*----------------------------------------------------------------
